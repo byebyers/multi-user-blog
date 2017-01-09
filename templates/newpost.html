@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="col-md-6 col-centered">
+      <h2>New Pigeon</h2>
+    </div>
+    <div class="col-lg-6 col-centered">
+      <form method="post" class="jebpost">
+        <label>
+          <div>subject</div>
+          <input type="text" name="subject" value="{{subject}}">
+        </label>
+
+        <label>
+          <div>blog</div>
+          <textarea name="content">{{content}}</textarea>
+        </label>
+
+        <input type="hidden" name="author" value="{{user.name}}">
+
+        <div class="error">{{error}}</div>
+
+        <input type="submit">
+        <a href="/blog" class="c-button">cancel</a>
+      </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="submenu-container col-lg-6 col-centered">
+	<a href="/blog" class="pigeon">
+	    {% if user %}
+	        Welcome, {{user.name}}!
+	    {% endif %}
+	</a>
+	<a href="blog/newpost" class="pigeon">Send a Pigeon</a>
+</div>
+
+<br>
+
+{% for p in posts %}
+{{ p.render() | safe }}
+{% endfor %}
+<br>
+
+{% endblock %}

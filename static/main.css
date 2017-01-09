@@ -1,0 +1,237 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background-color: #cfcfcf;
+}
+
+.jebnav {
+    background-color: #1d1d1d;
+}
+
+.jebheader {
+    margin: 60px 0;
+}
+
+.submenu-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f7f7f7;
+    height: 60px;
+    float: none;
+    box-shadow: 2px 2px 1px #888888;
+    padding: 15px;
+}
+
+.pigeon {
+    font-weight: bold;
+    color: black;
+    font-size: 24px;
+    margin: 0 15px 0 0;
+}
+
+.pigeon:hover {
+    color: black;
+}
+
+.titlenav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title-name {
+    color: white;
+    width: 60%;
+}
+
+.test-container {
+    height: 600px;
+    float: right;
+    padding: 0 20px;
+}
+
+.test2-container {
+    height: 240px;
+    float: left;
+    padding: 0 20px;
+}
+
+.test2-ad {
+    background-image: url("http://i.imgur.com/cq6oAWL.jpg");
+    height: 240px;
+}
+
+.test-ad {
+    background-image: url("http://i.imgur.com/L4sFogo.jpg");
+    height: 560px;
+}
+
+@media (max-width: 1250px) {
+    .test-ad {
+        display: none;
+    }
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.jebpost {
+    display: block;
+    background-color: #f7f7f7;
+    padding: 20px;
+    box-shadow: 2px 2px 1px #888888;
+}
+
+.login-area {
+    font-size: 13px;
+    color: white;
+    float: right;
+    padding: 40px 5px 10px 0;
+    width: 40%;
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+}
+
+.login-link:visited {
+    color: white;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.title-link {
+    color: white;
+    text-decoration: none;
+}
+
+.title-link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.post-link {
+    color: #333;
+}
+
+.post-link:hover {
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+input[type=text, type=password] {
+    width: 100%;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+input[type=submit] {
+  font-size: 24px;
+}
+
+.main-title {
+    display: block;
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.post + .post {
+    margin-top: 15px;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+    margin: 0 0 20px 0;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.post-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #666;
+
+}
+
+.post-content {
+    margin-top: 5px;
+}
+
+table {
+    margin: 0 0 20px 0;
+}
+
+td {
+    padding: 5px 0;
+}
+
+
+.pw-input {
+    width: 400px;
+}
+
+.new-label {
+    padding: 0 20px 0 0;
+}
+
+.post-author {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 15px 0;
+}
+
+.post-likes {
+    font-weight: bold;
+    margin: 15px 0 0 0;
+}
+
+.c-button {
+    margin: 20px 0;
+    float: right;
+}

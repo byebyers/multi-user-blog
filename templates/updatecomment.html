@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Update Comment</h2>
+
+<div class="jebpost col-lg-6 col-centered">
+	<form method="post" class="comment">
+
+		<div class="pigeon">Comment on {{subject}}</div>
+	    <p>{{content}}</p>
+
+	    <label>
+	        <textarea name="comment">{{comment}}</textarea>
+	    </label>
+
+	    <div class="error">{{error}}</div>
+
+	    <input type="submit">
+	</form>
+</div>
+{% endblock %}

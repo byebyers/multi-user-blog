@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>New Comment</h2>
+
+<div class="jebpost col-lg-6 col-centered">
+	<form method="post" class="comment">
+	    <div class="pigeon">Comment for <a href="/blog/{{pkey.id()}}" class="pigeon">{{subject}}</a></div>
+	    <p>{{content}}</p>
+	    <label>
+	        <textarea name="comment">{{comment}}</textarea>
+	        <input type="hidden" name="author" value="{{user.name}}">
+	    </label>
+
+	    <div class="error">{{error}}</div>
+
+	    <input type="submit">
+	    <a href="/blog/{{pkey.id()}}" class="c-button">cancel</a>
+	</form>
+</div>
+{% endblock %}

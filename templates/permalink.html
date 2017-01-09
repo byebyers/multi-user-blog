@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="submenu-container col-lg-6 col-centered">
+	<a href="/blog" class="pigeon">&#9664; Go back</a>
+	{% if user %}
+	<aside>
+	    <tr class="controls">
+	        {% if user.name == post.author %}
+	        <td>
+	            <a href="/blog/{{post.key().id()}}/edit" class="pigeon">&#9998; Edit</a>
+	        </td>
+	        <td>
+	            <a href="/blog/{{post.key().id()}}/removepost" class="like-button pigeon">&#10006; Delete</a>
+	        </td>
+	        {% else %}
+	        <td>
+	            <a href="/blog/{{post.key().id()}}/like" class="pigeon">&#9829; Like</a>
+	        </td>
+	        {% endif %}
+	    </tr>
+	</aside>
+	{% endif %}
+</div>
+
+<br>
+
+  {{post.render() | safe}}
+
+<br>
+
+<div class="jebpost col-lg-6 col-centered">
+	{% if user and post.comments %}
+	<div>
+	    <span>{{post.comments.count()}} comments</span>
+	</div>
+
+	<div class="post-comments">
+	    <h2>Comments</h2>
+
+	    {% for c in post.comments %}
+
+	    <div class="comment">
+	        <div class="comment-author">{{ c.parent().name }} says:</div>
+	        <p class="comment-content">{{ c.comment }}</p>
+	        {% if user.name == c.author %}
+	        <a href="/blog/{{post.key().id()}}/updatecomment/{{c.key().id()}}">update</a>
+	        <span class="separator"> | </span>
+	        <a href="/blog/{{post.key().id()}}/deletecomment/{{c.key().id()}}">delete</a>
+	        {% endif %}
+	    </div>
+
+	    {% endfor %}
+
+	    <a href="/blog/{{post.key().id()}}/newcomment">add new comment</a>
+
+	    {% endif %}
+
+	</div>
+</div>
+
+{% endblock %}
