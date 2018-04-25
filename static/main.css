@@ -87,7 +87,8 @@ body {
     display: block;
     background-color: #f7f7f7;
     padding: 20px;
-    box-shadow: 2px 2px 1px #888888;
+    box-shadow: 2px 2px 1px #666666;
+    
 }
 
 .login-area {
